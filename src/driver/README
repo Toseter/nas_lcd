@@ -1,0 +1,24 @@
+NAS LCD Module Linux USB Driver.
+
+Developed on 2.6.38-14-generic version of Linux kernel.
+
+Device Vendor ID 0x04d8 (Official Microchip USB devices Vendor ID). 
+Token from //http://www.linux-usb.org/usb.ids
+
+Device Product ID 0xfff0 (Used by default, but but can be set up in ../nas_lcd.h)
+
+Usage:
+Build driver from source first:
+	$ make
+
+Use it or install it into your system:
+	# insmod nas_lcd.ko
+		To insert module in system by hands
+	# make install
+		To install module into system
+
+To remove module from your system do this:
+	# make remove
+
+To remove builded files do:
+	# make clean
