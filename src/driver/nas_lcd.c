@@ -24,6 +24,10 @@
 #include <linux/semaphore.h> 
 
 
+MODULE_AUTHOR ("ArhiChief <arhichief@gmail.com>");
+MODULE_LICENSE ("GPL v2");
+MODULE_DESCRIPTION ("NAS_LCD Module Linux USB Driver.");
+
 /* Vendor and Product IDs for device */
 #define NAS_LCD_VENDOR_ID		0x04d8			// Official Microchip Inc. Vendor ID
 #define NAS_LCD_PRODUCT_ID		0xfff0			// Could be changed if nessecery
@@ -140,17 +144,4 @@ static struct usb_driver nas_lcd_driver = {
 };
 
 /* Initialize and cleanup routine */
-static int __init nas_lcd_init(void) {
-	return 0;
-} 
-
-static void __exit nas_lcd_exit(void) {
-}
-
-MODULE_AUTHOR ("ArhiChief <arhichief@gmail.com>");
-MODULE_LICENSE ("GPL2");
-MODULE_DESCRIPTION ("NAS_LCD Module Linux USB Driver.");
-
-module_init (nas_lcd_init);
-module_exit (nas_lcd_exit);
-
+module_usb_driver(nas_lcd_driver);
