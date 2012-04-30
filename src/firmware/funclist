@@ -1,0 +1,8 @@
+_LCDCmd: CODE, 2716 0 70
+_main: CODE, 2876 0 10
+_LCDInit: CODE, 2160 0 266
+_DelayMs: CODE, 2426 0 108
+_irq: CODE, 8 0 2630
+_USBInit: CODE, 2786 0 54
+_NASinit: CODE, 2638 0 78
+Total: 3216
